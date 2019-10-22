@@ -20,7 +20,7 @@ class Mail {
 
   configureTemplates() {
     const viewPath = resolve(__dirname, '..', 'app', 'views', 'emails');
-    this.transporter.user(
+    this.transporter.use(
       'compile',
       nodemailerhbs({
         viewEngine: exphbs.create({
